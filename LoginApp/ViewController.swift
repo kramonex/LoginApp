@@ -7,7 +7,7 @@
 
 import UIKit
 
-class LoginViewController: UIViewController {
+final class LoginViewController: UIViewController {
 
     
     @IBOutlet var userName: UITextField!
@@ -24,6 +24,12 @@ class LoginViewController: UIViewController {
         view.endEditing(true)
     }
 
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let welcomeVC = segue.destination as? WelcomeViewController else { return }
+        welcomeVC.welcomeTextName += userName.text ?? ""
+    }
+    
 
     @IBAction func logInButtonTapped(_ sender: UIButton) {
         if userName.text == "User" && password.text == "12345" {

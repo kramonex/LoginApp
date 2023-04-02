@@ -91,10 +91,10 @@
             </objects>
             <point key="canvasLocation" x="11" y="4"/>
         </scene>
-        <!--View Controller-->
+        <!--Welcome View Controller-->
         <scene sceneID="g0U-XJ-SAi">
             <objects>
-                <viewController id="UJL-gO-eTv" sceneMemberID="viewController">
+                <viewController id="UJL-gO-eTv" customClass="WelcomeViewController" customModule="LoginApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="UiE-p3-IlD">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -112,6 +112,9 @@
                                 <buttonConfiguration key="configuration" style="plain" title="Log out">
                                     <fontDescription key="titleFontDescription" style="UICTFontTextStyleTitle1"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="logOutButtonTapped:" destination="UJL-gO-eTv" eventType="touchUpInside" id="o5T-VD-Id4"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vQF-EJ-2cv"/>
@@ -124,6 +127,9 @@
                             <constraint firstItem="nkM-Ky-eJC" firstAttribute="top" secondItem="vQF-EJ-2cv" secondAttribute="top" constant="175" id="v10-K3-SY5"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="welcomeText" destination="nkM-Ky-eJC" id="FsN-zO-pbN"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8IG-oU-4Vz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
