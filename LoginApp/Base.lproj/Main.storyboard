@@ -2,16 +2,17 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Login View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="LoginApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="LoginViewController" customModule="LoginApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -36,7 +37,7 @@
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="filled" title="Log in"/>
                                         <connections>
-                                            <action selector="logInButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KKq-IO-khF"/>
+                                            <action selector="logInButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kU4-Aw-mzg"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -51,7 +52,7 @@
                                             <fontDescription key="titleFontDescription" style="UICTFontTextStyleCaption1"/>
                                         </buttonConfiguration>
                                         <connections>
-                                            <action selector="forgotUserNameButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NsJ-aS-uB6"/>
+                                            <action selector="forgotUserNameButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vEb-5F-Anh"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pg9-EL-Ejt">
@@ -61,7 +62,7 @@
                                             <fontDescription key="titleFontDescription" style="UICTFontTextStyleCaption1"/>
                                         </buttonConfiguration>
                                         <connections>
-                                            <action selector="forgotPasswordButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hkR-sz-F5Z"/>
+                                            <action selector="forgotPasswordButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5Ji-Z0-kNp"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -80,8 +81,8 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="password" destination="Cji-zQ-CfW" id="rwM-44-CcL"/>
-                        <outlet property="userName" destination="0MO-Fb-vic" id="7kD-oS-kwE"/>
+                        <outlet property="password" destination="Cji-zQ-CfW" id="hnH-s8-acc"/>
+                        <outlet property="userName" destination="0MO-Fb-vic" id="dNV-Zw-Ehf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

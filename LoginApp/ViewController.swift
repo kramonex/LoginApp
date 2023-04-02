@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class LoginViewController: UIViewController {
 
     
     @IBOutlet var userName: UITextField!
@@ -18,9 +18,22 @@ class ViewController: UIViewController {
         
     }
 
+    // Метод для скрытия клавиатуры тапом по экрану
+//    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+//        super .touchesBegan(touches, with: event)
+//    }
+//    
+    
+//    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+//                guard let touch = touches.first else { return }
+//                let location = touch.location(in: self)
+//                send(location, forEvent: .started)
+//            }
+//
+    
 
     @IBAction func logInButtonTapped(_ sender: UIButton) {
-        if userName.text == "User" && password.text == "12345" {
+        if userName.text == "User" || password.text == "12345" {
             
         } else {
             showAlert(withTitle: "Invalid login or password ",
