@@ -36,11 +36,11 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func forgotUserNameButtonTapped(_ sender: UIButton) {
-        showAlert(withTitle: "Ooops!", andMessage: "Your name is User")
+        showAlert(withTitle: "Ooops!", andMessage: "Your name is User 😉")
     }
     
     @IBAction func forgotPasswordButtonTapped(_ sender: UIButton) {
-        showAlert(withTitle: "Ooops!", andMessage: "Your password is 12345")
+        showAlert(withTitle: "Ooops!", andMessage: "Your password is 12345 😉")
     }
     
     
