@@ -8,7 +8,8 @@
 import UIKit
 
 final class LoginViewController: UIViewController {
-
+    
+    //MARK: Outlets
     
     @IBOutlet var userName: UITextField!
     @IBOutlet var password: UITextField!
@@ -19,6 +20,7 @@ final class LoginViewController: UIViewController {
         view.endEditing(true)
     }
 
+    //MARK: methods for segue
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let welcomeVC = segue.destination as? WelcomeViewController else { return }
@@ -30,8 +32,9 @@ final class LoginViewController: UIViewController {
         password.text = ""
     }
     
-
-    @IBAction func logInButtonTapped(_ sender: UIButton) {
+    //MARK: methods for button
+    
+    @IBAction func logInButtonTapped(_ : UIButton) {
         if userName.text == "User" && password.text == "12345" {
         } else {
             showAlert(withTitle: "Invalid login or password ",
@@ -39,14 +42,15 @@ final class LoginViewController: UIViewController {
         }
     }
     
-    @IBAction func forgotUserNameButtonTapped(_ sender: UIButton) {
+    @IBAction func forgotUserNameButtonTapped(_ : UIButton) {
         showAlert(withTitle: "Ooops!", andMessage: "Your name is User 😉")
     }
     
-    @IBAction func forgotPasswordButtonTapped(_ sender: UIButton) {
+    @IBAction func forgotPasswordButtonTapped(_ : UIButton) {
         showAlert(withTitle: "Ooops!", andMessage: "Your password is 12345 😉")
     }
     
+    //MARK: methods for alert
     
     private func showAlert(withTitle title: String, andMessage message: String){
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
