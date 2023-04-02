@@ -18,22 +18,15 @@ class LoginViewController: UIViewController {
         
     }
 
-    // Метод для скрытия клавиатуры тапом по экрану
-//    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-//        super .touchesBegan(touches, with: event)
-//    }
-//    
-    
-//    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-//                guard let touch = touches.first else { return }
-//                let location = touch.location(in: self)
-//                send(location, forEvent: .started)
-//            }
-//
-    
+//     Метод для скрытия клавиатуры тапом по экрану
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        super .touchesBegan(touches, with: event)
+        view.endEditing(true)
+    }
+
 
     @IBAction func logInButtonTapped(_ sender: UIButton) {
-        if userName.text == "User" || password.text == "12345" {
+        if userName.text == "User" && password.text == "12345" {
             
         } else {
             showAlert(withTitle: "Invalid login or password ",
