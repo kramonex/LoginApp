@@ -114,6 +114,7 @@
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="logOutButtonTapped:" destination="UJL-gO-eTv" eventType="touchUpInside" id="o5T-VD-Id4"/>
+                                    <segue destination="9Mq-Gk-bUe" kind="unwind" unwindAction="unwindFor:" id="hy4-Oe-w3K"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -132,6 +133,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8IG-oU-4Vz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="9Mq-Gk-bUe" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="769" y="4"/>
         </scene>

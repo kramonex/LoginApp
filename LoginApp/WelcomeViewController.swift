@@ -13,14 +13,13 @@ final class WelcomeViewController: UIViewController {
     
     var welcomeTextName = "Welcome, "
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        welcomeText.text = welcomeTextName
+        welcomeText.text = welcomeTextName + "!"
     }
     
-
     @IBAction func logOutButtonTapped(_ sender: UIButton) {
+        dismiss(animated: true)
     }
-    
-
 }

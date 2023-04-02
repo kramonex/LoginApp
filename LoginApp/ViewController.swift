@@ -13,11 +13,6 @@ final class LoginViewController: UIViewController {
     @IBOutlet var userName: UITextField!
     @IBOutlet var password: UITextField!
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-    }
-
 //     Метод для скрытия клавиатуры тапом по экрану
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         super .touchesBegan(touches, with: event)
@@ -30,15 +25,18 @@ final class LoginViewController: UIViewController {
         welcomeVC.welcomeTextName += userName.text ?? ""
     }
     
+    @IBAction func unwind(for segue: UIStoryboardSegue){
+        userName.text = ""
+        password.text = ""
+    }
+    
 
     @IBAction func logInButtonTapped(_ sender: UIButton) {
         if userName.text == "User" && password.text == "12345" {
-            
         } else {
             showAlert(withTitle: "Invalid login or password ",
                       andMessage: "Please, enter correct login and password")
         }
-        
     }
     
     @IBAction func forgotUserNameButtonTapped(_ sender: UIButton) {
