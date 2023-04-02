@@ -117,13 +117,31 @@
                                     <segue destination="9Mq-Gk-bUe" kind="unwind" unwindAction="unwindFor:" id="hy4-Oe-w3K"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ssT-ym-iZZ">
+                                <rect key="frame" x="146" y="224" width="83" height="88"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="88" id="4CY-Rz-C7O"/>
+                                    <constraint firstAttribute="width" constant="83" id="zsz-Ab-lqs"/>
+                                </constraints>
+                                <attributedString key="attributedText">
+                                    <fragment content="👋">
+                                        <attributes>
+                                            <font key="NSFont" size="74" name=".AppleColorEmojiUI"/>
+                                            <font key="NSOriginalFont" metaFont="system" size="53"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vQF-EJ-2cv"/>
-                        <color key="backgroundColor" red="0.96841138601303101" green="0.79031646133249345" blue="0.42598664547998377" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="backgroundColor" red="0.59101892889713403" green="0.96841138601303101" blue="0.6046585400276121" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="vQF-EJ-2cv" firstAttribute="bottom" secondItem="PQ4-Sf-puV" secondAttribute="bottom" constant="197" id="0zZ-9h-lYc"/>
                             <constraint firstItem="PQ4-Sf-puV" firstAttribute="centerX" secondItem="vQF-EJ-2cv" secondAttribute="centerX" id="Ghg-iJ-fEo"/>
                             <constraint firstItem="nkM-Ky-eJC" firstAttribute="centerX" secondItem="vQF-EJ-2cv" secondAttribute="centerX" id="IPa-6C-7v0"/>
+                            <constraint firstItem="ssT-ym-iZZ" firstAttribute="top" secondItem="nkM-Ky-eJC" secondAttribute="bottom" constant="10" id="K9o-VH-o4x"/>
+                            <constraint firstItem="ssT-ym-iZZ" firstAttribute="centerX" secondItem="vQF-EJ-2cv" secondAttribute="centerX" id="ZDl-Xx-g7A"/>
                             <constraint firstItem="PQ4-Sf-puV" firstAttribute="height" secondItem="UiE-p3-IlD" secondAttribute="height" multiplier="0.0591133" id="t5T-uO-X2w"/>
                             <constraint firstItem="nkM-Ky-eJC" firstAttribute="top" secondItem="vQF-EJ-2cv" secondAttribute="top" constant="175" id="v10-K3-SY5"/>
                         </constraints>
@@ -135,7 +153,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8IG-oU-4Vz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="9Mq-Gk-bUe" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="769" y="4"/>
+            <point key="canvasLocation" x="768.79999999999995" y="3.6945812807881775"/>
         </scene>
     </scenes>
     <resources>

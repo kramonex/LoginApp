@@ -17,7 +17,15 @@ final class WelcomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         welcomeText.text = welcomeTextName + "!"
+        
+        let gradientLayer = CAGradientLayer()
+                gradientLayer.frame = view.bounds
+                gradientLayer.colors = [UIColor.systemCyan.cgColor, UIColor.systemFill.cgColor]
+                view.layer.insertSublayer(gradientLayer, at: 0)
     }
+    
+    
+    
     
     @IBAction func logOutButtonTapped(_ sender: UIButton) {
         dismiss(animated: true)
