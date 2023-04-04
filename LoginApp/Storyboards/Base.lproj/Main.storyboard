@@ -173,7 +173,7 @@
             </objects>
             <point key="canvasLocation" x="768.75" y="3.1690140845070425"/>
         </scene>
-        <!--Profile View Controller-->
+        <!--Test-->
         <scene sceneID="AUb-14-Cau">
             <objects>
                 <viewController id="7FL-yG-tAQ" customClass="ProfileViewController" customModule="LoginApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -183,11 +183,33 @@
                         <viewLayoutGuide key="safeArea" id="IXb-g5-4id"/>
                         <color key="backgroundColor" systemColor="systemOrangeColor"/>
                     </view>
-                    <navigationItem key="navigationItem" id="RA6-GS-Cai"/>
+                    <navigationItem key="navigationItem" title="Test" id="RA6-GS-Cai">
+                        <barButtonItem key="rightBarButtonItem" title="Bio" id="g6h-5S-aO7">
+                            <connections>
+                                <segue destination="QUX-2x-JoL" kind="show" id="rGg-ft-gWj"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="673-Yb-0ol" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2550" y="912.67605633802816"/>
+            <point key="canvasLocation" x="2340" y="913"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="lnV-do-6ST">
+            <objects>
+                <viewController id="QUX-2x-JoL" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="nJx-16-gPM">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="b6E-ay-Tb4"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Fsb-h8-tsm"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XIv-b9-xNY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3279" y="913"/>
         </scene>
         <!--Profile-->
         <scene sceneID="dqQ-Ef-1Ld">
@@ -195,9 +217,12 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="xqO-Ly-QLB" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Profile" image="person.fill" catalog="system" id="Zen-nW-fwm"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="PGG-VH-owx">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="PGG-VH-owx">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="92.5"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
