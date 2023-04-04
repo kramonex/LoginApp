@@ -4,6 +4,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -89,14 +90,14 @@
                     <connections>
                         <outlet property="passwordTF" destination="Cji-zQ-CfW" id="Kwf-iV-oSp"/>
                         <outlet property="userNameTF" destination="0MO-Fb-vic" id="0V3-NW-h0z"/>
-                        <segue destination="UJL-gO-eTv" kind="presentation" identifier="showWelcomeVC" modalPresentationStyle="fullScreen" id="8SE-YI-zmG"/>
+                        <segue destination="pIm-4c-iaf" kind="presentation" identifier="showWelcomeVC" modalPresentationStyle="fullScreen" id="8SE-YI-zmG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="11" y="4"/>
         </scene>
-        <!--Welcome View Controller-->
+        <!--Home-->
         <scene sceneID="g0U-XJ-SAi">
             <objects>
                 <viewController id="UJL-gO-eTv" customClass="WelcomeViewController" customModule="LoginApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -105,7 +106,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome," textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nkM-Ky-eJC">
-                                <rect key="frame" x="60" y="133" width="200" height="39"/>
+                                <rect key="frame" x="60" y="118.5" width="200" height="39"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="AFl-28-WW4"/>
                                 </constraints>
@@ -114,7 +115,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PQ4-Sf-puV">
-                                <rect key="frame" x="102.5" y="425.5" width="115" height="48"/>
+                                <rect key="frame" x="102.5" y="384.5" width="115" height="48"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Log out">
@@ -125,7 +126,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="👋" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ssT-ym-iZZ">
-                                <rect key="frame" x="128.5" y="212" width="63" height="70"/>
+                                <rect key="frame" x="128.5" y="197.5" width="63" height="70"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="58"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -142,6 +143,9 @@
                             <constraint firstItem="vQF-EJ-2cv" firstAttribute="bottom" secondItem="PQ4-Sf-puV" secondAttribute="bottom" multiplier="1.2" id="noN-5o-7Kq"/>
                         </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Home" id="L28-7L-PpD">
+                        <imageReference key="image" image="house" catalog="system" variableValue="0.80000000000000004"/>
+                    </tabBarItem>
                     <connections>
                         <outlet property="welcomeText" destination="nkM-Ky-eJC" id="FsN-zO-pbN"/>
                     </connections>
@@ -149,15 +153,54 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8IG-oU-4Vz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="9Mq-Gk-bUe" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="768.79999999999995" y="3.6945812807881775"/>
+            <point key="canvasLocation" x="769" y="913"/>
+        </scene>
+        <!--Tab Bar View Controller-->
+        <scene sceneID="CYe-T1-Y6q">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="pIm-4c-iaf" customClass="TabBarViewController" customModule="LoginApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" alpha="0.80000000000000004" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="B2U-RT-Etb">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="UJL-gO-eTv" kind="relationship" relationship="viewControllers" id="uBM-M4-Ikb"/>
+                        <segue destination="7FL-yG-tAQ" kind="relationship" relationship="viewControllers" id="2KW-d3-Pdv"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PvD-8d-wcv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="768.75" y="3.1690140845070425"/>
+        </scene>
+        <!--Profile-->
+        <scene sceneID="AUb-14-Cau">
+            <objects>
+                <viewController id="7FL-yG-tAQ" customClass="ProfileViewController" customModule="LoginApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" alpha="0.90000000000000002" contentMode="scaleToFill" id="yl5-PL-qB7">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="IXb-g5-4id"/>
+                        <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Profile" image="person.fill" catalog="system" id="Zen-nW-fwm"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="673-Yb-0ol" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1554" y="913"/>
         </scene>
     </scenes>
     <resources>
+        <image name="house" catalog="system" width="128" height="104"/>
+        <image name="person.fill" catalog="system" width="128" height="120"/>
         <systemColor name="secondarySystemBackgroundColor">
             <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

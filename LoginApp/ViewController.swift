@@ -18,6 +18,11 @@ final class LoginViewController: UIViewController {
     private let password = "12345"
     
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        autofilling()
+    }
+    
 //     Метод для скрытия клавиатуры тапом по экрану
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         super .touchesBegan(touches, with: event)
@@ -67,6 +72,11 @@ final class LoginViewController: UIViewController {
         }
         alert.addAction(okAction)
         present(alert, animated: true)
+    }
+    
+    private func autofilling(){
+        userNameTF.text = user
+        passwordTF.text = password
     }
     
 }
