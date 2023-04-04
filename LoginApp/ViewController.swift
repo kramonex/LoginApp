@@ -11,8 +11,12 @@ final class LoginViewController: UIViewController {
     
     //MARK: Outlets
     
-    @IBOutlet var userName: UITextField!
-    @IBOutlet var password: UITextField!
+    @IBOutlet var userNameTF: UITextField!
+    @IBOutlet var passwordTF: UITextField!
+    
+    private let user = "User"
+    private let password = "12345"
+    
     
 //     Метод для скрытия клавиатуры тапом по экрану
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -24,38 +28,41 @@ final class LoginViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let welcomeVC = segue.destination as? WelcomeViewController else { return }
-        welcomeVC.welcomeTextName += userName.text ?? ""
+        welcomeVC.welcomeTextName = user
     }
     
     @IBAction func unwind(for segue: UIStoryboardSegue){
-        userName.text = ""
-        password.text = ""
+        userNameTF.text = ""
+        passwordTF.text = ""
     }
     
     //MARK: methods for button
     
-    @IBAction func logInButtonTapped(_ : UIButton) {
-        if userName.text == "User" && password.text == "12345" {
-        } else {
-            showAlert(withTitle: "Invalid login or password ",
-                      andMessage: "Please, enter correct login and password")
+    @IBAction func logInButtonTapped() {
+        guard userNameTF.text == "User", passwordTF.text == "12345" else {
+            showAlert(
+                title: "Invalid login or password ",
+                message: "Please, enter correct login and password"
+            )
+            return
         }
+        performSegue(withIdentifier: "showWelcomeVC", sender: nil)
     }
     
     @IBAction func forgotUserNameButtonTapped(_ : UIButton) {
-        showAlert(withTitle: "Ooops!", andMessage: "Your name is User 😉")
+        showAlert(title: "Ooops!", message: "Your name is \(user) 😉")
     }
     
     @IBAction func forgotPasswordButtonTapped(_ : UIButton) {
-        showAlert(withTitle: "Ooops!", andMessage: "Your password is 12345 😉")
+        showAlert(title: "Ooops!", message: "Your password is \(password) 😉")
     }
     
     //MARK: methods for alert
     
-    private func showAlert(withTitle title: String, andMessage message: String){
+    private func showAlert(title: String, message: String, textField: UITextField? = nil){
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
         let okAction = UIAlertAction(title: "OK", style: .default) { _ in
-            self.password.text = ""
+            textField?.text = ""
         }
         alert.addAction(okAction)
         present(alert, animated: true)
