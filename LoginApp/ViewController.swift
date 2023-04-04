@@ -42,7 +42,8 @@ final class LoginViewController: UIViewController {
         guard userNameTF.text == "User", passwordTF.text == "12345" else {
             showAlert(
                 title: "Invalid login or password ",
-                message: "Please, enter correct login and password"
+                message: "Please, enter correct login and password",
+                textField: passwordTF
             )
             return
         }
