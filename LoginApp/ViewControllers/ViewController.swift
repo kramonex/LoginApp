@@ -14,9 +14,10 @@ final class LoginViewController: UIViewController {
     @IBOutlet var userNameTF: UITextField!
     @IBOutlet var passwordTF: UITextField!
     
-    private let user = "User"
-    private let password = "12345"
+    private let user = getLogin()
+    private let password = getPassword()
     
+  
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,8 +33,14 @@ final class LoginViewController: UIViewController {
     //MARK: methods for segue
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let welcomeVC = segue.destination as? WelcomeViewController else { return }
-        welcomeVC.welcomeTextName = user
+        guard let tabBarController = segue.destination as? UITabBarController else { return }
+        guard let viewControllers = tabBarController.viewControllers else { return }
+        
+        viewControllers.forEach { viewController in
+            if let welcomeVC = viewController as? WelcomeViewController {
+                welcomeVC.welcomeTextName = user
+            }
+        }
     }
     
     @IBAction func unwind(for segue: UIStoryboardSegue){
@@ -44,7 +51,7 @@ final class LoginViewController: UIViewController {
     //MARK: methods for button
     
     @IBAction func logInButtonTapped() {
-        guard userNameTF.text == "User", passwordTF.text == "12345" else {
+        guard userNameTF.text == user, passwordTF.text == password else {
             showAlert(
                 title: "Invalid login or password ",
                 message: "Please, enter correct login and password",
